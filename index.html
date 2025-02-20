@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ML.SOMA</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,16 +37,34 @@
                     </button>
                     <a href="#" class="navbar-brand scroll-top"><em>ML</em>soma</a>
                 </div>
+
                 <!--/.navbar-header-->
                 <div id="main-nav" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#" class="scroll-top">Home</a></li>
 
-                        <li><a href="#" class="scroll-link" data-id="about">Service</a></li>
-                        <li><a href="#" class="scroll-link" data-id="portfolio">Blog</a></li>
-                        <li><a href="#" class="scroll-link" data-id="blog">Team</a></li>
+                    <ul class="nav navbar-nav">
+
+
+                        <li><a href="#" class="scroll-top">Home</a></li>
+                        <li><a href="#" class="scroll-link" data-id="sevice">Service</a></li>
+                        <li><a href="#" class="scroll-link" data-id="Product">Product</a></li>
+                        <li><a href="#" class="scroll-link" data-id="testimonial">Team</a></li>
                         <li><a href="#" class="scroll-link" data-id="contact-us">Contact Us</a></li>
                     </ul>
+                </div>
+
+                <div class="navbar-header">
+                    <select style="
+                    position: absolute;
+                    left: 35pc;
+                    top: 31.4px;
+                    border: none;
+                    font-size: revert-layer;
+                    background: border-box;
+                    color: #f7c552;
+                ">
+                        <option value="en">ENGLISH</option>
+                        <option value="cn">中文</option>
+                </select>
                 </div>
                 <!--/.navbar-collapse-->
             </nav>
@@ -60,31 +78,142 @@
     <div class="parallax-content baner-content" id="home">
         <div class="container">
             <div class="text-content">
-                <h2><em>Wellcome</em> <span>To</span> ML.SOMA Page</h2>
-                <p>ML.SOMA is Marketing website's that be easily to find third party service to got IT Service Support that has many IT professionals Please tell us about your issues, to getout cutting-edge solutions that easily boost for business's purposes,
-                    Thanks you..</p>
-                <div class="primary-white-button">
-                    <a href="#" class="scroll-link" data-id="about">See now..</a>
+                <div class="animate-charcter">
+                    <h2 data-text="Wellcome To ML.SOMA Page"><em>Wellcome</em><span>To</span> ML.SOMA Page</h2>
                 </div>
+                <p><span>
+                    ML.SOMA is Marketing website's that be easily to find third party service to got IT Service Support that has many IT professionals Please tell us about your issues, to getout cutting-edge solutions that easily boost for business's purposes,
+                    Thanks you..
+                </span></p>
+                <div class="primary-white-button">
+                    <a href="#" class="scroll-link button" data-id="Product">See now..</a>
+                </div>
+                <style>
+                    .button {
+                        min-width: 50px;
+                        display: inline-flex;
+                        font-family: 'Nunito', sans-serif;
+                        font-size: 22px;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        text-align: center;
+                        letter-spacing: 1.3px;
+                        font-weight: 700;
+                        color: #313133;
+                        background: #4FD1C5;
+                        background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+                        border: none;
+                        border-radius: 1000px;
+                        box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+                        transition: all 0.3s ease-in-out 0s;
+                        cursor: pointer;
+                        outline: none;
+                        position: relative;
+                        padding: 10px;
+                    }
+                    
+                    .button::before {
+                        content: '';
+                        border-radius: 1000px;
+                        min-width: calc(200px + 12px);
+                        min-height: calc(60px + 12px);
+                        border: 6px solid #00FFCB;
+                        box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        transition: all .3s ease-in-out 0s;
+                    }
+                    
+                    .button:hover,
+                    .button:focus {
+                        color: #313133;
+                        transform: translateY(-6px);
+                    }
+                    
+                    .button:hover::before,
+                    .button:focus::before {
+                        opacity: 1;
+                    }
+                    
+                    .button::after {
+                        content: '';
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        border: 6px solid #00FFCB;
+                        position: absolute;
+                        z-index: -1;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        animation: ring 1.5s infinite;
+                    }
+                    
+                    .button:hover::after,
+                    .button:focus::after {
+                        animation: none;
+                        display: none;
+                    }
+                    
+                    @keyframes ring {
+                        0% {
+                            width: 30px;
+                            height: 30px;
+                            opacity: 1;
+                        }
+                        100% {
+                            width: 300px;
+                            height: 300px;
+                            opacity: 0;
+                        }
+                    }
+                </style>
             </div>
         </div>
     </div>
 
 
-    <section id="about" class="page-section">
+    <style>
+        .animate-charcter {
+            text-transform: uppercase;
+            background-image: linear-gradient( -225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 5.5s linear infinite;
+            display: inline-block;
+            font-size: 190px;
+        }
+        
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+    </style>
+
+    <section id="sevice" class="page-section">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-item">
                         <div class="icon">
-                            <img src="img/service_icon_01.png" alt="">
+                            <img src="img/Network.png" alt="">
                         </div>
                         <h4>Networking</h4>
                         <div class="line-dec"></div>
-                        <p>Curabitur non risus fringilla libero accumsan molestie et quis justo. Cras aliquam tempor sem, vestibulum facilisis dui. Mauris malesuada porta.</p>
+                        <p>Experienced and certified technicians Customized network solutions for your business needs 24/7 support and monitoring Affordable pricing with no hidden fees Guaranteed satisfaction and reliability</p>
                         <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                            <a href="#" class="scroll-link button" data-id="portfolio">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -92,13 +221,13 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-item">
                         <div class="icon">
-                            <img src="img/service_icon_02.png" alt="">
+                            <img src="img/vpn-png.png" alt="">
                         </div>
                         <h4>VPN</h4>
                         <div class="line-dec"></div>
-                        <p>Suspendisse magna mauris, convallis vel finibus eget, lobortis dictum neque. Nam tincidunt metus nec eros dignissim consectetur. Duis mollis.</p>
+                        <p>Military-grade encryption No-logs policy for ultimate privacy 24/7 customer support Unlimited bandwidth and lightning-fast speeds Affordable plans for personal and business use</p>
                         <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                            <a href="#" class="scroll-link button" data-id="portfolio">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -106,98 +235,98 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-item">
                         <div class="icon">
-                            <img src="img/service_icon_03.png" alt="">
+                            <img src="img/webdesing.png" alt="">
                         </div>
                         <h4>Web Design</h4>
                         <div class="line-dec"></div>
-                        <p>Etiam quis ullamcorper augue. Morbi leo libero, malesuada eget eleifend eu, interdum sed augue. Sed tempor mi quis rhoncus convallis.</p>
+                        <p>Creative and innovative designs Experienced web designers and developers Tailored solutions to meet your business needs Fast turnaround times Competitive pricing and packages.</p>
                         <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                            <a href="#" class="scroll-link button " data-id="portfolio">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12" style="padding:20px; background:rgba(138, 103, 196, 0.363); border-radius: 10px; ">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-item">
                         <div class="icon">
-                            <img src="img/service_icon_04.png" alt="">
+                            <img src="img/ITSupport.png" alt="">
                         </div>
                         <h4>IT Support</h4>
                         <div class="line-dec"></div>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent viverra, nunc et mollis fermentum.</p>
+                        <p>Experienced and certified IT professionals 24/7 support and quick response times Customized IT solutions for your business Competitive pricing and transparent service Ensuring minimal downtime and maximum productivity</p>
                         <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                            <a href="#" class="scroll-link button" data-id="portfolio">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
 
-    <section id="portfolio">
-        <div class="content-wrapper">
-            <div class="inner-container container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="section-heading">
-                            <h4>Our Gallery</h4>
-                            <div class="line-dec"></div>
-                            <p>In malesuada placerat ligula et bibendum. Aenean eget urna enim. Sed enim ante, bibendum nec dictum ac, gravida ac lectus.</p>
-                            <div class="filter-categories">
-                                <ul class="project-filter">
-                                    <li class="filter" data-filter="all"><span>Show All</span></li>
-                                    <li class="filter" data-filter="branding"><span>Branding</span></li>
-                                    <li class="filter" data-filter="graphic"><span>Graphic</span></li>
-                                    <li class="filter" data-filter="nature"><span>Nature</span></li>
-                                    <li class="filter" data-filter="animation"><span>Animation</span></li>
-                                </ul>
+                <!-- 
+
+                <div class="content-wrapper">
+                    <div class="inner-container container">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                <div class="section-heading">
+                                    <h4>Our Gallery</h4>
+                                    <div class="line-dec"></div>
+                                    <p>In malesuada placerat ligula et bibendum. Aenean eget urna enim. Sed enim ante, bibendum nec dictum ac, gravida ac lectus.</p>
+                                    <div class="filter-categories">
+                                        <ul class="project-filter">
+                                            <li class="filter" data-filter="all"><span>Show All</span></li>
+                                            <li class="filter" data-filter="branding"><span>Branding</span></li>
+                                            <li class="filter" data-filter="graphic"><span>Graphic</span></li>
+                                            <li class="filter" data-filter="nature"><span>Nature</span></li>
+                                            <li class="filter" data-filter="animation"><span>Animation</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="projects-holder-3">
-                            <div class="projects-holder">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 project-item mix nature">
-                                        <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/portfolio_big_item_01.jpg" data-lightbox="image-1"><img src="img/portfolio_item_01.jpg"></a>
+                            <div class="col-md-8">
+                                <div class="projects-holder-3">
+                                    <div class="projects-holder">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 project-item mix nature">
+                                                <div class="thumb">
+                                                    <div class="image">
+                                                        <a href="img/portfolio_big_item_01.jpg" data-lightbox="image-1"><img src="img/portfolio_item_01.jpg"></a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix animation">
-                                        <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/portfolio_big_item_02.jpg" data-lightbox="image-1"><img src="img/portfolio_item_02.jpg"></a>
+                                            <div class="col-md-6 col-sm-6 project-item mix animation">
+                                                <div class="thumb">
+                                                    <div class="image">
+                                                        <a href="img/portfolio_big_item_02.jpg" data-lightbox="image-1"><img src="img/portfolio_item_02.jpg"></a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix branding">
-                                        <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/portfolio_big_item_03.jpg" data-lightbox="image-1"><img src="img/portfolio_item_03.jpg"></a>
+                                            <div class="col-md-6 col-sm-6 project-item mix branding">
+                                                <div class="thumb">
+                                                    <div class="image">
+                                                        <a href="img/portfolio_big_item_03.jpg" data-lightbox="image-1"><img src="img/portfolio_item_03.jpg"></a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix graphic nature">
-                                        <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/portfolio_big_item_04.jpg" data-lightbox="image-1"><img src="img/portfolio_item_04.jpg"></a>
+                                            <div class="col-md-6 col-sm-6 project-item mix graphic nature">
+                                                <div class="thumb">
+                                                    <div class="image">
+                                                        <a href="img/portfolio_big_item_04.jpg" data-lightbox="image-1"><img src="img/portfolio_item_04.jpg"></a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix branding">
-                                        <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/portfolio_big_item_05.jpg" data-lightbox="image-1"><img src="img/portfolio_item_05.jpg"></a>
+                                            <div class="col-md-6 col-sm-6 project-item mix branding">
+                                                <div class="thumb">
+                                                    <div class="image">
+                                                        <a href="img/portfolio_big_item_05.jpg" data-lightbox="image-1"><img src="img/portfolio_item_05.jpg"></a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 project-item mix graphic animation">
-                                        <div class="thumb">
-                                            <div class="image">
-                                                <a href="img/portfolio_big_item_06.jpg" data-lightbox="image-1"><img src="img/portfolio_item_06.jpg"></a>
+                                            <div class="col-md-6 col-sm-6 project-item mix graphic animation">
+                                                <div class="thumb">
+                                                    <div class="image">
+                                                        <a href="img/portfolio_big_item_06.jpg" data-lightbox="image-1"><img src="img/portfolio_item_06.jpg"></a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -205,11 +334,166 @@
                             </div>
                         </div>
                     </div>
+                </div>                
+
+-->
+            </div>
+    </section>
+
+    <section class="tabs-content" id="Product">
+        <div class="container">
+            <div class="row">
+                <div class="wrapper">
+                    <div class="col-md-4">
+                        <div class="section-heading">
+                            <h3>We Products</h3>
+                            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+
+                                <li><a href="#tab1" class="active">Network</a></li>
+                                <li><a href="#tab2">VPN</a></li>
+                                <li><a href="#tab3">WEB Design</a></li>
+                                <li><a href="#tab4">IT Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <section id="first-tab-group" class="tabgroup">
+                            <div id="tab1">
+                                <div class="text-content">
+                                    <h4>Comprehensive Network Solutions</h4>
+                                    <span><a href="#">Network Marketing</a> / <a href="#">SEMVIMOT</a> / <a href="#">20 September 2022</a></span>
+
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                # Network installation and setup
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Network maintenance and troubleshooting
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Wi-Fi optimization and upgrades
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Secure Router,Switching configuration
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Enterprise network solutions
+                                            </p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div id="tab2">
+
+                                <div class="text-content">
+                                    <h4>Protect Your Privacy & Access the World</h4>
+                                    <span><a href="#">Computing Master</a> / <a href="#">David</a> / <a href="#">14 September 2012</a></span>
+                                    <ul>
+                                        <li>
+                                            <p># Provice Pulice IP</p>
+                                        </li>
+                                        <li>
+                                            <p># High-speed, encrypted internet connections</p>
+                                        </li>
+                                        <li>
+                                            <p># Access to global content without restrictions</p>
+                                        </li>
+                                        <li>
+                                            <p># Secure remote access for businesses</p>
+                                        </li>
+                                        <li>
+                                            <p># Protection from cyber threats and data breaches</p>
+                                        </li>
+                                        <li>
+                                            <p># Easy-to-use apps for all devices</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="tab3">
+
+                                <div class="text-content">
+                                    <h4>Transform Your Online Presence</h4>
+                                    <span><a href="#">Web Design</a> / <a href="#">William</a> / <a href="#">20 August 2017</a></span>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                # Custom website design and development
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Responsive and mobile-friendly designs
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # E-commerce solutions
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Website maintenance and updates
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # SEO optimization and analytics
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="tab4">
+                                <div class="text-content">
+                                    <h4>Your Tech Problems, Our Solutions</h4>
+                                    <span><a href="#">IT HELPDESK</a> / <a href="#">Mosa</a> / <a href="#">14 August 2011</a></span>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                # On-site and remote IT support
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # System and network troubleshooting
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Hardware and software installation
+
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Cybersecurity solutions
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                # Data backup and recovery
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section id="testimonial">
         <div class="container">
@@ -250,64 +534,6 @@
         </div>
     </section>
 
-    <div class="tabs-content" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="wrapper">
-                    <div class="col-md-4">
-                        <div class="section-heading">
-                            <h4>Our Blog Posts</h4>
-                            <div class="line-dec"></div>
-                            <p>Nam vulputate elementum nulla, sit amet congue ipsum malesuada pretium. Vivamus vel gravida quam.</p>
-                            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                                <li><a href="#tab1" class="active">Nulla eget convallis augue</a></li>
-                                <li><a href="#tab2">Quisque ultricies maximus</a></li>
-                                <li><a href="#tab3">Sed vel elit et lorem</a></li>
-                                <li><a href="#tab4">Vivamus purus neque</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <section id="first-tab-group" class="tabgroup">
-                            <div id="tab1">
-                                <img src="img/blog_item_01.jpg" alt="">
-                                <div class="text-content">
-                                    <h4>Nulla eget convallis augue</h4>
-                                    <span><a href="#">Digital Marketing</a> / <a href="#">Honey</a> / <a href="#">26 September 2017</a></span>
-                                    <p>Donec interdum scelerisque auctor. Nulla id lorem auctor, bibendum lectus elementum, porta felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                </div>
-                            </div>
-                            <div id="tab2">
-                                <img src="img/blog_item_02.jpg" alt="">
-                                <div class="text-content">
-                                    <h4>Quisque ultricies maximus</h4>
-                                    <span><a href="#">Branding</a> / <a href="#">David</a> / <a href="#">14 September 2017</a></span>
-                                    <p>Etiam fringilla posuere pretium. Maecenas tempor pellentesque elit in dapibus. Curabitur viverra urna sem, ut sollicitudin sem congue vel. Donec fringilla augue in justo molestie fermentum quis ac mi.</p>
-                                </div>
-                            </div>
-                            <div id="tab3">
-                                <img src="img/blog_item_03.jpg" alt="">
-                                <div class="text-content">
-                                    <h4>Sed vel elit et lorem</h4>
-                                    <span><a href="#">Web Design</a> / <a href="#">William</a> / <a href="#">20 August 2017</a></span>
-                                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id ipsum porta, dictum sem sed, bibendum quam. Maecenas mattis risus eget orci rhoncus.</p>
-                                </div>
-                            </div>
-                            <div id="tab4">
-                                <img src="img/blog_item_04.jpg" alt="">
-                                <div class="text-content">
-                                    <h4>Vivamus purus neque</h4>
-                                    <span><a href="#">E-Commerce</a> / <a href="#">George</a> / <a href="#">14 August 2017</a></span>
-                                    <p>Aliquam erat volutpat. Nulla at nunc nec ante rutrum congue id in diam. Nulla at lectus non turpis placerat volutpat lacinia ut mi. Quisque ultricies maximus justo a blandit. Donec sit amet commodo arcu. Sed sit amet
-                                        iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="contact-us">
         <div class="container">
