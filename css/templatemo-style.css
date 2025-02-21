@@ -258,6 +258,7 @@ bootstrap.min.css:navbar-toggle {
 }
 
 #sevice .service-item {
+    margin: 5px;
     height: 600px;
     text-align: center;
     padding: 20px;
@@ -266,11 +267,13 @@ bootstrap.min.css:navbar-toggle {
 }
 
 #sevice .service-item:hover {
+    margin: 2px;
     height: 610px;
     text-align: center;
-    padding: 22px;
+    padding: 21px;
     background: linear-gradient(29deg, #201253 10%, #7200eb 39%, #02201d 77%, #4e4c07 100%);
     border-radius: 5px;
+    color: #000000;
 }
 
 #sevice .service-item .icon {
@@ -281,7 +284,7 @@ bootstrap.min.css:navbar-toggle {
     line-height: 135px;
     border: 0px solid #fff;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 #sevice .service-item h4 {

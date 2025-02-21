@@ -201,10 +201,9 @@
     </style>
 
     <section id="sevice" class="page-section">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="container content">
+            <div class="row wrapper">
+                <div class="col-md-3 col-sm-6 col-xs-12 box ">
                     <div class="service-item">
                         <div class="icon">
                             <img src="img/Network.png" alt="">
@@ -218,7 +217,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12 box ">
                     <div class="service-item">
                         <div class="icon">
                             <img src="img/vpn-png.png" alt="">
@@ -232,7 +231,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12 box ">
                     <div class="service-item">
                         <div class="icon">
                             <img src="img/webdesing.png" alt="">
@@ -246,7 +245,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12 box ">
                     <div class="service-item">
                         <div class="icon">
                             <img src="img/ITSupport.png" alt="">
@@ -651,7 +650,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             // navigation click actions 
@@ -672,6 +671,12 @@
                 event.preventDefault();
                 $('#main-nav').toggleClass("open");
             });
+
+            $("body").on("scroll", function() {
+                $(".service-item").hide();
+            });
+
+
         });
         // scroll function
         function scrollToID(id, speed) {
@@ -692,6 +697,7 @@
             };
         }
     </script>
+
 </body>
 
 </html>
