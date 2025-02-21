@@ -264,6 +264,7 @@ bootstrap.min.css:navbar-toggle {
     padding: 20px;
     background: linear-gradient(21deg, #3600ff 0%, #0d0318 29%, #6bddd0 67%, #fff800 100%);
     border-radius: 5px;
+    border: solid 2px lightseagreen;
 }
 
 #sevice .service-item:hover {
@@ -274,6 +275,7 @@ bootstrap.min.css:navbar-toggle {
     background: linear-gradient(29deg, #201253 10%, #7200eb 39%, #02201d 77%, #4e4c07 100%);
     border-radius: 5px;
     color: #000000;
+    border: solid 2px rgb(231, 209, 7);
 }
 
 #sevice .service-item .icon {
