@@ -914,6 +914,9 @@ footer .connect-us ul li a:hover {
 }
 
 @media (max-width: 385px) {
+    .tabs {
+        padding: 0px 45px;
+    }
     footer .location ul li {
         display: block;
     }

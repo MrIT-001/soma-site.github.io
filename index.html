@@ -596,6 +596,111 @@
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
+    <div id="go_top" class="d-none">
+        <div class="arrow"></div>
+    </div>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        
+        .d-none {
+            display: none;
+        }
+        
+        #go_top {
+            position: fixed;
+            right: 20px;
+            bottom: 40px;
+            cursor: pointer;
+            background: #f49100;
+            padding: 13px 10px 8px 10px;
+            clip-path: polygon(15% 0, 86% 0, 100% 14%, 100% 85%, 86% 100%, 14% 100%, 0 86%, 0 14%);
+            z-index: 9999;
+            border-radius: 50%;
+        }
+        
+        #go_top:hover {
+            background: #231557;
+            color: #fff;
+        }
+        
+        .arrow:before {
+            position: absolute;
+            left: 50%;
+        }
+        
+        .arrow {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            margin: 0px 0 0 0px;
+            -webkit-transform: rotate(-135deg);
+            border-left: none;
+            border-top: none;
+            border-right: 2px #fff solid;
+            border-bottom: 2px #fff solid;
+        }
+        
+        .arrow:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            top: 50%;
+            margin: -10px 0 0 -10px;
+            border-left: none;
+            border-top: none;
+            border-right: 2px #fff solid;
+            border-bottom: 2px #fff solid;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-name: arrow;
+        }
+        
+        @keyframes arrow {
+            0% {
+                opacity: 0;
+                transform: translate(-5px, -5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(5px, 5px);
+            }
+        }
+    </style>
+    <script>
+        const showOnPx = 300;
+        const backToTopButton = document.querySelector("#go_top");
+
+        const goToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        backToTopButton.addEventListener("click", goToTop);
+
+        document.addEventListener("scroll", () => {
+            console.log("Scroll Height: ", scrollContainer().scrollHeight);
+            console.log("Client Height: ", scrollContainer().clientHeight);
+
+            if (scrollContainer().scrollTop > showOnPx) {
+                backToTopButton.classList.remove("d-none");
+
+
+            } else {
+                backToTopButton.classList.add("d-none");
+            }
+        });
+
+        const scrollContainer = () => {
+            return document.documentElement || document.body;
+        };
+    </script>
+
+
     <footer>
         <div class="container">
             <div class="row">
@@ -671,7 +776,12 @@
 
             $("body").on("scroll", function() {
                 $(".service-item").hide();
+
+
             });
+
+
+
 
 
         });
