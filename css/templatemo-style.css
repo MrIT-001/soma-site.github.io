@@ -849,7 +849,10 @@ footer .connect-us ul li a:hover {
         padding: 0px 30px;
     }
     .tabs {
-        padding: 0px 45px;
+        /*padding: 0px 45px; */
+        display: flex;
+        padding: 0px;
+        justify-content: space-between;
     }
     #first-tab-group {
         margin-bottom: 30px;
