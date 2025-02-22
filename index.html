@@ -555,7 +555,7 @@
                 <div class="col-md-6 col-md-offset-3">
                     <div class="pop">
                         <span>✖</span>
-                        <form id="contact" action="#" method="post">
+                        <form id="contact">
                             <div class="row">
                                 <div class="col-md-12">
                                     <fieldset>
@@ -574,7 +574,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                        <button type="submit" class="form-submit btn">Send Out</button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -635,8 +635,8 @@
         
         .arrow {
             position: relative;
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             top: 50%;
             margin: 0px 0 0 0px;
             -webkit-transform: rotate(-135deg);
@@ -783,6 +783,10 @@
 
             });
 
+            $(".form-submit").on('click', function(event) {
+                alert('Done...');
+            });
+
 
 
 
@@ -807,6 +811,8 @@
             };
         }
     </script>
+
+
 
 </body>
 
